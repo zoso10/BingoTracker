@@ -88,9 +88,9 @@ public class BingoView extends JFrame{
 		if(callNumPanel == null){
 			callNumPanel = new JPanel();
 			callNumPanel.setLayout(new GridLayout(3,2));
-			JLabel winnerLabel = new JLabel("Winning Card: ");
+			JLabel winnerLabel = new JLabel("Winning Card: ", JLabel.CENTER);
 			winningCardLabel = new JLabel();
-			JLabel calledNumLabel = new JLabel("Called Num: ");
+			JLabel calledNumLabel = new JLabel("Called Num: ", JLabel.CENTER);
 			numberCalled = new JTextField();
 			callNumButton = new JButton("Call");
 			
@@ -113,7 +113,10 @@ public class BingoView extends JFrame{
 	}
 	
 	public void addListeners(ActionListener al){
+		addCardButton.setActionCommand("AddCard");
 		addCardButton.addActionListener(al);
+		callNumButton.setActionCommand("CallNum");
+		callNumButton.addActionListener(al);
 	}
 	
 	public void clear(){
