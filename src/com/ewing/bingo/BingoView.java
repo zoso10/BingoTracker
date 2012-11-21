@@ -108,7 +108,7 @@ public class BingoView extends JFrame{
 		entries[12].setText("-1");
 	}
 	
-	public void setID(String id){
+	public void setIDLabel(String id){
 		cardIDLabel.setText(id);
 	}
 }

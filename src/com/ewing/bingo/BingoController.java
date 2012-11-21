@@ -9,6 +9,7 @@ public class BingoController implements java.awt.event.ActionListener{
 	public BingoController(){
 		view = new BingoView();
 		model = new BingoModel();
+		view.setIDLabel(model.getCurrentID());
 	}
 	
 	public void addListeners(){
@@ -23,5 +24,7 @@ public class BingoController implements java.awt.event.ActionListener{
 		model.addCard(temp);
 		// Clear card
 		view.clear();
+		// Set the IDLabel to the next ID
+		view.setIDLabel(model.getCurrentID());
 	}
 }
