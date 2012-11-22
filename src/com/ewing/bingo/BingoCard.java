@@ -28,7 +28,7 @@ public class BingoCard {
 		
 	}
 	
-	public Boolean checkForBingo(){
+	public Boolean hasBingo(){
 		// There's gotta be a more clever way to do this...
 		
 		// Check vertically
@@ -37,7 +37,7 @@ public class BingoCard {
 					nums[2][col].isCovered(), nums[3][col].isCovered(), 
 					nums[4][col].isCovered()};
 			if(!Arrays.asList(temp).contains(false))
-				return true;
+				return Boolean.TRUE;
 		}
 		
 		// Check horizontally
@@ -46,22 +46,22 @@ public class BingoCard {
 					nums[row][2].isCovered(), nums[row][3].isCovered(),
 					nums[row][4].isCovered()};
 			if(!Arrays.asList(temp).contains(false))
-				return true;
+				return Boolean.TRUE;
 		}
 		
 		// Check upper left diagonal
 		Boolean[] temp1 = {nums[0][0].isCovered(), nums[1][1].isCovered(),
 				nums[2][2].isCovered(), nums[3][3].isCovered(), nums[4][4].isCovered()};
 		if(!Arrays.asList(temp1).contains(false))
-			return true;
+			return Boolean.TRUE;
 		
 		// Check upper right diagonal
 		Boolean[] temp2 = {nums[0][4].isCovered(), nums[1][3].isCovered(), 
 				nums[2][2].isCovered(),nums[3][1].isCovered(), 
 				nums[4][0].isCovered()};
 		if(!Arrays.asList(temp2).contains(false))
-			return true;
+			return Boolean.TRUE;
 		
-		return false;
+		return Boolean.FALSE;
 	}
 }

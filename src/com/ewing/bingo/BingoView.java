@@ -128,4 +128,16 @@ public class BingoView extends JFrame{
 	public void setIDLabel(String id){
 		cardIDLabel.setText(id);
 	}
+	
+	public void setWinningLable(String id){
+		winningCardLabel.setText(id);
+	}
+	
+	public int getCalledNum(){
+		return Integer.parseInt(numberCalled.getText());
+	}
+	
+	public void setCalledNum(String s){
+		numberCalled.setText(s);
+	}
 }

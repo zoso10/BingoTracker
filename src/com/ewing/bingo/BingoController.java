@@ -46,6 +46,12 @@ public class BingoController implements java.awt.event.ActionListener{
 	}
 	
 	private void numberCalled(){
-		System.out.println("Adding functionality in a bit");
+		//System.out.println("Adding functionality in a bit");
+		// Call the number
+		model.callNumber(view.getCalledNum());
+		// Clear the field
+		view.setCalledNum("");
+		// Check for a BINGO
+		view.setWinningLable(model.checkForBingo());
 	}
 }

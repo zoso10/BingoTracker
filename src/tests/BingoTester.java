@@ -28,7 +28,7 @@ public class BingoTester {
 		card.callNumber(6);
 		card.callNumber(2);
 		
-		System.out.println(card.checkForBingo());
+		System.out.println(card.hasBingo());
 		
 		
 		// 1D array -> 2D array
